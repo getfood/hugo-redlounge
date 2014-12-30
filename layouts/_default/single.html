@@ -97,6 +97,9 @@
 	            </div>
             {{ end }}
           </section>
+          {{ if .Site.Params.google }}  
+            {{ partial "adsensesidebar.html" . }} 
+          {{ end }}
           {{ if not .Params.nocomment }}
           	{{ template "_internal/disqus.html" . }}
           {{ end }}
